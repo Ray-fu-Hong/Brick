@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+   
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>打磚塊遊戲首頁</title>
+    <!-- 像素風字體 -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <style>
+        /* 背景 */
+       body {
+    margin: 0;
+    height: 100vh;
+    background-image:  url(img/head.jpg)  ;
+    background-repeat:no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+h1 {
+    font-size: 10rem;
+  background: linear-gradient(45deg, #010101, #0be628, #f40808);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: neonGradient 6s ease infinite;
+
+    margin-bottom: 90px;
+    letter-spacing: 3px;
+    font-family: 'Press Start 2P', cursive; 
+    border: #ea410e ;
+}
+
+@keyframes neonGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 按鈕外觀 - 復古像素風+霓虹邊框 */
+.btn {
+    background: linear-gradient(135deg, #e0f7ff, #cceeff);
+    border: 3px solid #00cfff;
+    color: #005577;
+    font-size: 1.5rem;
+    padding: 20px 40px;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow:
+        0 0 5px #00cfff,
+        0 0 10px #00cfff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+}
+.btn:hover {
+    box-shadow:
+        0 0 10px #00cfff,
+        0 0 20px #00cfff,
+        0 0 30px #00cfff;
+    background: linear-gradient(135deg, #a8e6ff, #d0f5ff);
+    color: #003344;
+}
+.btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+
+/* 按鈕容器 */
+.btn-container {
+    display: flex;
+    gap: 30px;
+}
+    </style>
+</head>
+<body>
+
+    <h1>超級打磚塊</h1>
+    <div class="btn-container">
+        <button class="btn" onclick="location.href='./brick.html'" >開始遊戲</button>
+        <button class="btn" onclick="location.href='./bricktitle.html'">遊戲說明</button>
+    </div>
+
+    <script>
+      
+    </script>
+
+</body>
+</html>
