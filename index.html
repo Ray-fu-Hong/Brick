@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colormemory</title>
+    <link rel="stylesheet" href="brick.css">
+   <style> @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');</style>
+  
+</head>
+<body>
+<div class="main-container">
+
+<nav class="pixel-navbar">
+  <a href="./firstPage.html">首頁</a>
+  <a  href="./score.html"  >排行榜</a>
+  <a href="./bricktitle.html">說明</a>
+  <a href="javascript:void(0)"id="openSettings">遊戲設定</a>
+</nav>
+
+  
+
+<!-- 設定面板 -->
+<div id="settingsPanel" >
+<h3>遊戲設定</h3>
+<label>球半徑：<input type="number" id="ballRadiusInput" value="10" min="0" max="50" /></label><br/>
+<label>球速：<input type="number" id="ballSpeedInput" value="6" min="1" max="30" /></label><br/>
+<label>初始生命：<input type="number" id="lifeInput" value="5" min="1" /></label><br/>
+<label>板子寬度：<input type="number" id="paddleWidthInput" value="100" /></label><br/>
+<label>球顏色：</label>
+<div id="colorPicker" class="color-options">
+  <div class="color-box" data-color="white" style="background: white;"></div>
+  <div class="color-box" data-color="black" style="background: black;"></div>
+  <div class="color-box" data-color="red" style="background: red;"></div>
+  <div class="color-box" data-color="orange" style="background: orange;"></div>
+  <div class="color-box" data-color="yellow" style="background: yellow;"></div>
+  <div class="color-box" data-color="green" style="background: green;"></div>
+  <div class="color-box" data-color="blue" style="background: blue;"></div>
+</div>
+<input type="hidden" id="ballColorInput" value="black">
+<button onclick="applySettings()">套用設定</button>
+</div>
+
+
+    <div class ="canvasContainer">
+<canvas id = "gameCanvas" height = "500" width="900" style = "border:1px solid #111"></canvas>
+    </div>
+
+
+
+
+    
+    <div id="gameOverScreen" class="game-over-screen"style="display: none;" >
+  <h1 class="game-over-title">Game Over</h1>
+  <p class="score-text">你的分數：<span id="finalScore">0</span></p>
+  <form id="scoreForm" onsubmit="saveScore(event)">請輸入名字： <input type="text" class="pixel-input" placeholder="你的名字"  id="playerName">
+    <button type="submit" class="btn btn-outline-light "style="margin-top: 50px;">重新開始</button>
+ </form>
+</div>
+
+
+<img id="bgImage" src="./img/pic.jpg" style="display: none;" />
+<img id="brickImage1" src="./img/brick1.jpg" style="display: none;">
+<img id="brickImage2" src="./img/brick2.jpg" style="display: none;">
+<img id="brickImage3" src="./img/brick3.jpg" style="display: none;">
+<img id="brickImage4" src="./img/brick4.jpg" style="display: none;">
+<img id="brickImage5" src="./img/brick5.jpg" style="display: none;">
+<img id="paddleImage" src="./img/paddle.jpg" style="display:none">
+<img id="ballImage" src="./img/paddle.jpg" style="display: none;">
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="brick.js"></script>    
+</body>
+</html>
